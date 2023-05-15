@@ -2,7 +2,7 @@ import { RequestHandler } from 'express'
 import { Response, NextFunction } from 'express';
 import { AuthRequest } from '../types/AuthRequest';
 import jwt from 'jsonwebtoken';
-import { User } from '../models/User';
+import { User, UserModel } from '../models/user';
 
 interface TokenPayload {
   userId: string;
@@ -28,7 +28,7 @@ export const isAdmin = async (
     const payload = jwt.verify(token, process.env.JWT_SECRET!) as TokenPayload;
 
 
-    const currentUser = await User.findOne({ email: payload.email });
+    const currentUser = await UserModel.findOne({ email: payload.email });
 
     if (!currentUser || currentUser.role !== 'admin') {
       throw new Error('Forbidden');

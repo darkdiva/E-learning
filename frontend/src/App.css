@@ -1,42 +1,259 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Navbar*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+
+p, Link {
+
+  margin: 0;
+}
+
+.top {
+  width: 100%;
+  height: 78px;
+  border: 1px solid rgba(139, 140, 140, 0.37);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(26, 7, 57, 0.34);
+  display: flex;
+  justify-content: space-between;
+}
+.nav_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+.top-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 10px 5px 5px 31px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  background-color: rgba(213, 219, 225, 1);
+  margin-left: 200px;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  line-height: 20px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
   text-align: center;
+  letter-spacing: 2px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.workspace {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  line-height: 20px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.selected {
+  width: 147px;
+  height: 100%;
+  padding: 8px 13px 12px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  background-color: rgba(26, 7, 57, 1);
+  margin-right: 20px;
+}
+.community {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  line-height: 20px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
-.card {
-  padding: 2em;
+.subscription {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  line-height: 20px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
-.read-the-docs {
-  color: #888;
+.search_bar {
+  width: 35.79px;
+  height: 31.32px;
 }
+
+.top-right img {
+  width: 204px;
+  height: 100%;
+}
+.ib_league {
+  color: rgba(26, 7, 57, 1);
+  font-size: 22px;
+  line-height: 22px;
+  font-family: Outfit, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+/* Sidebar */
+
+
+.side_bar {
+  width: 299px;
+  height: 1062px;
+  border: 1px solid rgba(139, 139, 140, 0.19);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-sizing: border-box;
+  background-color: rgba(26, 7, 57, 0.34);
+}
+.side_bar_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+.group-24 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.side_bar_selected {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 11px 225px 14px 19px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  box-sizing: border-box;
+  background-color: rgba(139, 140, 140, 0.37);
+
+}
+
+.image-5,
+.image-3,
+.image-8,
+.image-10,
+.logout,
+.image-1 {
+  width: 36px;
+  height: 100%;
+}
+
+.instructors_2,
+.contentmanager_2,
+.contentcreators_2,
+.students_2,
+.parent_2,
+.message_2,
+.call-meeting,
+.logout-1, 
+.admin_2 {
+  color: rgba(0, 0, 0, 1);
+  font-size: 22px;
+  line-height: 22px;
+  font-family: Outfit, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.66px;
+  position: absolute;
+  left: 64px;
+
+}
+
+.students,
+.contentcreators,
+.contentmanager,
+.parent,
+.message,
+.call,
+.log-out, 
+.admin,
+.instructors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.image-4 {
+  width: 39px;
+  height: 100%;
+}
+
+.group-23 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 57px;
+  height: 100%;
+}
+
+.image-81 {
+  width: 34px;
+  height: 100%;
+}
+
+.line-1 {
+  width: 240px;
+  height: 1px;
+  border: 1px solid rgba(26, 7, 57, 1);
+}
+
+.clients {
+  color: rgba(0, 0, 0, 1);
+  font-size: 22px;
+  line-height: 22px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.image-11 {
+  width: 40px;
+  height: 100%;
+}
+
+.line-45 {
+  width: 229px;
+  height: 1px;
+  border: 1px solid rgba(29, 30, 44, 1);
+  margin-bottom: 10px;
+}
+.role:hover {
+  cursor: pointer;
+}
+
+

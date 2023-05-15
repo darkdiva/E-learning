@@ -26,6 +26,8 @@ const App = () => {
         <Route path="/">
           <div>Home</div>
         </Route>
+        <Route path="api/home" element={<HomePage />} />
+        <Route path="/api/admin/community" element={<Community />} />
       </Routes>
     </Router>
   );
