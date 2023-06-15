@@ -1,4 +1,4 @@
-import {User} from 'c:/Users/mhadh/OneDrive/Bureau/pfe/backend/backend/src/models/user';
+import {User} from '../../models/User';
 export const validateUser = (user: User): string[] => {
   const errors: string[] = [];
 

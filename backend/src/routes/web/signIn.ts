@@ -1,8 +1,7 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import  { User, UserModel } from 'c:/Users/mhadh/OneDrive/Bureau/pfe/backend/backend/src/models/user';
-
+import  { User,UserModel} from '../../models/User';
 const JWT_SECRET: string = process.env.JWT_SECRET || '';
 
 async function signin(req: Request, res: Response){

@@ -1,11 +1,13 @@
+
+
 const BASE_URL = 'http://localhost:3000';
 
 export const register = async (userData: {
-  username: string;
+  fullName: string;
   email: string;
   password: string;
 }) => {
-  const response = await fetch(`${BASE_URL}/api/signup`, {
+  const response = await fetch(`${BASE_URL}/api/SignUp`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -15,8 +17,8 @@ export const register = async (userData: {
   return response.json();
 };
 
-export const login = async (userData: { email: string; password: string }) => {
-  const response = await fetch(`${BASE_URL}/api/login`, {
+export const Signin = async (userData: { email: string; password: string }) => {
+  const response = await fetch(`${BASE_URL}/api/Signin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -25,3 +27,18 @@ export const login = async (userData: { email: string; password: string }) => {
   });
   return response.json();
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

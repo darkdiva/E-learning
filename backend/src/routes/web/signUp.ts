@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import  { User,UserModel} from 'C:\Users\mhadh\OneDrive\Bureau\e-school\backend\src\models\user.ts';
+import  { User,UserModel} from '../../models/User';
 
 const JWT_SECRET: string = process.env.JWT_SECRET || '';
 

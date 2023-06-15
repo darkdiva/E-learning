@@ -29,7 +29,7 @@ const Account: React.FC = () => {
       setSuccessMessage('');
       setErrorMessage('');
 
-      const response = await axios.put<AccountResponse>(`/api/account/update/general/${userId}`, {
+      const response = await axios.put<AccountResponse>(`/api/account/update/general/${userid}`, {
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,
