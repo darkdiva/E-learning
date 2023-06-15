@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { UserModel, User } from '../../models/User';
+import { UserModel, User } from '../../models/user';
 const JWT_SECRET: string = process.env.JWT_SECRET || '';
 
 async function signup(req: Request, res: Response): Promise<Response> {

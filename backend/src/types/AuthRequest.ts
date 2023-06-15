@@ -1,9 +1,10 @@
 import { Request } from "express";
-import { User } from "../models/user";
+import { User, UserModel } from "../models/user";
 
 
 
 export interface AuthRequest extends Request {
-  user?: User;
-  isAdmin?: boolean;
+  user?: {
+    id: string;
+  };
 }
