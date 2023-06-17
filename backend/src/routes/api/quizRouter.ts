@@ -1,45 +1,21 @@
-import express, { Request, Response } from 'express';
-import { v4 as uuidv4 } from 'uuid';
-import { Quiz, Question as questions } from '../models/quiz';
+import express = require('express');
+import { createQuiz,getQuizzes,getQuizById,updateQuizById,deleteQuizById } from '../../controllers/QuizController';
 
-const quizRouter = express.Router();
+const router = express.Router();
 
-let quizzes: Quiz[] = [];
+// Create a new quiz
+router.post('/quizzes', createQuiz);
 
-quizRouter.get('/', (req: Request, res: Response) => {
-  res.json(quizzes);
-});
+// Get all quizzes
+router.get('/quizzes', getQuizzes);
 
-quizRouter.post('/', (req: Request, res: Response) => {
-  const newQuiz: Quiz = {
-    id: uuidv4(),
-    title: req.body.title,
-    questions: req.body.questions,
-  };
-  quizzes.push(newQuiz);
-  res.status(201).json(newQuiz);
-});
+// Get a specific quiz by ID
+router.get('/quizzes/:id', getQuizById);
 
-quizRouter.get('/:id', (req: Request, res: Response) => {
-  const quiz = quizzes.find(q => q.id === req.params.id);
-  if (quiz) {
-    res.json(quiz);
-  } else {
-    res.status(404).json({ message: 'Quiz not found' });
-  }
-});
+// Update a quiz by ID
+router.put('/quizzes/:id', updateQuizById);
 
-quizRouter.post('/:id/submit', (req: Request, res: Response) => {
-  const quiz = quizzes.find(q => q.id === req.params.id);
-  if (quiz) {
-    const submittedQuiz = {
-      quizId: quiz.id,
-      answers: req.body.answers,
-    };
-    res.status(201).json(submittedQuiz);
-  } else {
-    res.status(404).json({ message: 'Quiz not found' });
-  }
-});
+// Delete a quiz by ID
+router.delete('/quizzes/:id', deleteQuizById);
 
-export default quizRouter;
+export default router;

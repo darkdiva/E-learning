@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Authrouters from './routes/api/auth';
-import videoRoutes from './routes/web/videoRoutes';
+import videoRoutes from './routes/api/videoRoutes';
 
 const app = express();
 
